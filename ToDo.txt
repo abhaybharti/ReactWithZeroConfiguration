@@ -6,6 +6,11 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
 immutable data structures
 https://facebook.github.io/react/docs/rendering-elements.html - React app into HTML
 https://www.youtube.com/watch?v=xsSnOQynTHs - Hot Reload Module
+https://www.robinwieruch.de/what-is-an-api-javascript/
+built-in JavaScript map
+https://reactjs.org/
+https://reactjs.org/docs/lists-and-keys.html
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 
 configure react
 ---------------
