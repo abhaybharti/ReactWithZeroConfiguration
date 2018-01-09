@@ -6,3 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
+
+//hot module to reload app not refresh browser page
+if (module.hot){
+	module.hot.accept();
+}

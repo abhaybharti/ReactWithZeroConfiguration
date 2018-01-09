@@ -1,3 +1,14 @@
 https://reactjs.org/docs/dom-elements.html - DOM Elements
 https://reactjs.org/docs/introducing-jsx.html - JSX
 https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html - React Component, elements & Instances
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const - ES6 Const
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let -ES6 Let
+immutable data structures
+https://facebook.github.io/react/docs/rendering-elements.html - React app into HTML
+https://www.youtube.com/watch?v=xsSnOQynTHs - Hot Reload Module
+
+configure react
+---------------
+npm install -g create-react-app - to install react template project
+create-react-app --version - get version
+create-react-app <your app name> 

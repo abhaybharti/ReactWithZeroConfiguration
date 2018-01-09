@@ -4,7 +4,7 @@ import './App.css';
 
 export default class Appx extends Component {
   render() {
-	  var helloWorld ="welcome to React via variable";
+	  var helloWorld ="welcome to React via Appx";
     return (
       <div className="App">
         <h2>{helloWorld}</h2>
