@@ -11,6 +11,20 @@ built-in JavaScript map
 https://reactjs.org/
 https://reactjs.org/docs/lists-and-keys.html
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Constructor
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer
+https://reactjs.org/docs/state-and-lifecycle.html
+higher order function
+https://reactjs.org/docs/handling-events.html
+https://en.wikipedia.org/wiki/Higher-order_function
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+https://reactjs.org/docs/forms.html
+https://reactjs.org/docs/composition-vs-inheritance.html
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
+https://facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html
+https://reactjs.org/docs/components-and-props.html
 
 configure react
 ---------------

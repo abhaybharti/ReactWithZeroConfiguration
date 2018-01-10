@@ -68,39 +68,51 @@ export default class App extends Component
   {
 	  const { searchTerm, list } = this.state;
 		return (
+		
 			<div className="App">
-				<Search
-					value = {searchTerm}
-					onChange={this.onSearchChange
-				}/>
-				<Table 
-					list ={list}
-					pattern={searchTerm}
-					onDismiss={this.onDismiss}
-				/>
+				<form>
+					<input type="text" value = {searchTerm} onChange={this.onSearchChange}/>
+				</form>
+		     	{this.state.list.filter(isSearched(this.state.searchTerm)).map(item => 
+					<div key={item.objectID}>
+						<span>
+							<a href={item.url}>{item.title}1</a>
+						</span>
+						<span>{item.author}</span>
+						<span>{item.num_comments}</span>
+						<span>{item.points}</span>
+						<span>
+							<button
+								onClick={() => this.onDismiss(item.objectID)}
+								type="button"
+							>
+								Dismiss
+							</button>
+						</span>
+						<span>
+							<button onClick={this.onClickMe.bind(this)}
+							type="button"
+							> Click Me
+							</button>
+						</span>
+					</div>
+				)}
 			</div>
 		);
   }
 }
 
-// Component using class
-/*
 class Search extends Component
 {
 	render(){
-		const { value, onChange, children } = this.props;
+		const { value, onChange } = this.props;
 		return(
 			<form>
-			{children} <input 
-				type="text" 
-				value={value}
-				onChange={onChange}
-			/>
+				<input type="text" onChange={onChange}/>
 			</form>
 		);
 	}
 }
-*/
 
 class Table extends Component
 {
@@ -117,48 +129,15 @@ class Table extends Component
 						<span>{item.num_comments}</span>
 						<span>{item.points}</span>
 						<span>
-							<Button
-								onclick={()=> onDismiss(item.objectID)}>
-								Dismiss
-							</Button>
+							<button
+								onclick={()=> onDismiss(item.objectID)}
+								type="button"
+							>Dismiss
+							</button>
 						</span>
 					</div>
 				)}
 				</div>
 			);
 	}
-}
-
-class Button extends Component
-{
-	render(){
-		const {
-			onClick,
-			className='',
-			children,
-		} = this.props;
-		
-		return(
-			<button
-				onClick={onClick}
-				className={className}
-				type="button"
-			>
-			{children}
-			</button>
-		);
-	}
-}
-
-//Functional Stateless Components using ES 6 method
-const Search =({value, onChange, children}) =>{
-	return(
-	<form>
-		{children} <input
-			type="text"
-			value ={value}
-			onChange={onChange}
-		/>
-	</form>
-	)
 }
