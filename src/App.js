@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+
+const DEFAULT_QUERY = 'redux';
+const PATH_BASE = 'https://hn.algolia.com/api/v1';
+const PATH_SEARCH = '/search';
+const PARAM_SEARCH = 'query=';
+
+//const url = '${PATH_BASE}${PATH_SEARCH}?${PARAM_SEARCH}${DEFAULT_QUERY}';
+var url = PATH_BASE + PATH_SEARCH + '?' + PARAM_SEARCH + DEFAULT_QUERY;
+console.log("url - "+url);
+
+/*
 const list = [
 	{
 		title: 'React',
@@ -20,7 +30,7 @@ const list = [
 		objectID: 1,
 	},
 ];
-
+*/
 const isSearched = searchTerm => item => item.title.toLowerCase().includes(searchTerm.toLowerCase());
 
 export default class App extends Component 
@@ -28,56 +38,91 @@ export default class App extends Component
   constructor(props){
 	  super(props);
 	  
-	  this.state ={
-		  list,
-		  searchTerm: '',
+	  this.state = {
+		result: null,
+		searchTerm: DEFAULT_QUERY,
 	  };
 	  
-	  this.onDismiss = this.onDismiss.bind(this);
-	  
-	  this.doSomething = this.doSomething.bind(this);
-	  this.doSomethingElse = this.doSomethingElse.bind(this);
-	  
-	  this.onSearchChange = this.onSearchChange.bind(this);
-	  this.onDismiss = this.onDismiss.bind(this);
+		this.setSearchTopStories = this.setSearchTopStories.bind(this);
+		this.fetchSearchTopStories = this.fetchSearchTopStories.bind(this);
+		this.onSearchChange = this.onSearchChange.bind(this);
+		this.onSearchSubmit = this.onSearchSubmit.bind(this);
+		this.onDismiss = this.onDismiss.bind(this);
   }
+  
+	onSearchSubmit(){
+		const { searchTerm } = this.state;
+		this.fetchSearchTopStories(searchTerm);
+	}
   
     onSearchChange(event){
 		this.setState({searchTerm: event.target.value});
 	}
 	
-	doSomething() {
-	// do something
+	onDismiss(id){
+	  const isNotId = item => item.objectID !== id;
+	  //const updatedHits = this.state.result.hits.filter(isNotId);
+	  //this.setState({list : updatedHits});
+	  const updatedHits = this.state.result.hits.filter(isNotId);
+	  this.setState({
+		  result: Object.assign({}, this.state.result, {hits: updatedHits})
+	  });
+	}
+  
+	setSearchTopStories(result) {
+		this.setState({ result });
+	}	
+	
+	fetchSearchTopStories(searchTerm) {
+		console.log("JSON Endpoint - " +JSON.stringify({url}));
+		//fetch(PATH_BASE + PATH_SEARCH + '?' + PARAM_SEARCH + DEFAULT_QUERY)
+		fetch('https://hn.algolia.com/api/v1/search?query=redux')
+		.then(response => response.json())
+		.then(result => this.setSearchTopStories(result))
+		.catch(e => e);
 	}
 	
-	doSomethingElse() {
-	// do something else
+	componentDidMount() {
+		const { searchTerm } = this.state;
+		this.fetchSearchTopStories(searchTerm);
 	}
 
-  onClickMe(){
-	  console.log(this);
-  }
-  
-  onDismiss(id){
-	  const isNotId = item => item.objectID !== id;
-	  const updatedList = this.state.list.filter(isNotId);
-	  this.setState({list : updatedList});
-  }
-  
   render() 
   {
-	  const { searchTerm, list } = this.state;
-		return (
-			<div className="App">
+	  const { searchTerm, result } = this.state;
+	   return (
+			<div className="page">
+			  <div className="interactions">
 				<Search
 					value = {searchTerm}
-					onChange={this.onSearchChange
-				}/>
-				<Table 
-					list ={list}
-					pattern={searchTerm}
-					onDismiss={this.onDismiss}
+					onChange = {this.onSearchChange}
+					onsubmit = {this.onSearchSubmit}
+					const Search =({
+						value,
+						onChange,
+						onSubmit,
+						children
+					})=>
+					<form onSubmit ={onsubmit}>
+						<input 
+						  type = "text"
+						  value={value}
+						  onChange={onChange}
+						 />
+						 <button type="submit">
+							{children}
+						</button>
+					</form>
 				/>
+				</div>
+				{ result 
+					? <Table 
+					  list ={result.hits}
+					  pattern={searchTerm}
+					  onDismiss={this.onDismiss}
+					 />
+					:null
+				}
 			</div>
 		);
   }
@@ -107,18 +152,19 @@ class Table extends Component
 	render(){
 		const{ list, pattern, onDismiss }= this.props;
 		return(
-			<div>
+			<div className="table">
 				{list.filter(isSearched(pattern)).map(item=>
-					<div key={item.objectID}>
-						<span>
+					<div key={item.objectID} className="table-row">
+						<span style={largeColumn}>
 							<a href={item.url}>{item.title}</a>
 						</span>
-						<span>{item.author}</span>
-						<span>{item.num_comments}</span>
-						<span>{item.points}</span>
-						<span>
+						<span style={midColumn}>{item.author}</span>
+						<span style={smallColumn}>{item.num_comments}</span>
+						<span style={smallColumn}>{item.points}</span>
+						<span style={smallColumn}>
 							<Button
-								onclick={()=> onDismiss(item.objectID)}>
+								onclick={()=> onDismiss(item.objectID)}
+								className="button-inline">
 								Dismiss
 							</Button>
 						</span>
@@ -162,3 +208,16 @@ const Search =({value, onChange, children}) =>{
 	</form>
 	)
 }
+
+
+const largeColumn = {
+	width: '40%',
+};
+
+const midColumn = {
+	width: '30%',
+};
+
+const smallColumn = {
+	width: '10%',
+};

@@ -25,6 +25,22 @@ https://reactjs.org/docs/composition-vs-inheritance.html
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
 https://facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html
 https://reactjs.org/docs/components-and-props.html
+https://github.com/styled-components/styled-components
+https://github.com/css-modules/css-modules
+https://reactjs.org/docs/try-react.html
+https://www.robinwieruch.de/what-is-an-api-javascript/
+https://reactjs.org/docs/react-component.html
+https://reactjs.org/docs/state-and-lifecycle.html
+https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html
+https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Template_literals
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+https://www.robinwieruch.de/react-fetching-data/
+spread operator
+https://github.com/tc39/proposal-object-rest-spread
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator
+https://www.robinwieruch.de/conditional-rendering-react/
+
 
 configure react
 ---------------
