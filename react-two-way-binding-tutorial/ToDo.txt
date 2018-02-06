@@ -1,0 +1,49 @@
+https://reactjs.org/docs/dom-elements.html - DOM Elements
+https://reactjs.org/docs/introducing-jsx.html - JSX
+https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html - React Component, elements & Instances
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const - ES6 Const
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let -ES6 Let
+immutable data structures
+https://facebook.github.io/react/docs/rendering-elements.html - React app into HTML
+https://www.youtube.com/watch?v=xsSnOQynTHs - Hot Reload Module
+https://www.robinwieruch.de/what-is-an-api-javascript/
+built-in JavaScript map
+https://reactjs.org/
+https://reactjs.org/docs/lists-and-keys.html
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#Constructor
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer
+https://reactjs.org/docs/state-and-lifecycle.html
+higher order function
+https://reactjs.org/docs/handling-events.html
+https://en.wikipedia.org/wiki/Higher-order_function
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+https://reactjs.org/docs/forms.html
+https://reactjs.org/docs/composition-vs-inheritance.html
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters
+https://facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html
+https://reactjs.org/docs/components-and-props.html
+https://github.com/styled-components/styled-components
+https://github.com/css-modules/css-modules
+https://reactjs.org/docs/try-react.html
+https://www.robinwieruch.de/what-is-an-api-javascript/
+https://reactjs.org/docs/react-component.html
+https://reactjs.org/docs/state-and-lifecycle.html
+https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html
+https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Template_literals
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+https://www.robinwieruch.de/react-fetching-data/
+spread operator
+https://github.com/tc39/proposal-object-rest-spread
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator
+https://www.robinwieruch.de/conditional-rendering-react/
+
+
+configure react
+---------------
+npm install -g create-react-app - to install react template project
+create-react-app --version - get version
+create-react-app <your app name> 
