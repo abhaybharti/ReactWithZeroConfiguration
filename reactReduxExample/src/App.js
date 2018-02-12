@@ -16,7 +16,7 @@ import Radio from './components/Radio';
 import Select from './components/Select';
 import SelectMultiple from './components/SelectMultiple';
 import textArea from './components/textArea';
-
+import ItemList from './components/ItemList';
 
 export default class App extends Component {
   constructor (props){
@@ -25,31 +25,33 @@ export default class App extends Component {
 			name :"Hello world",
 			message : "ES6 says Hello"
 		};
-		console.log("Constructor");
+		console.log("App -> Constructor");
 	}
   
   ComponentWillMount(){
-	  console.log("ComponentWillMount");
+	  console.log("App -> ComponentWillMount");
   }
   
   ComponentDidMount(){
-	  console.log("ComponentDidMount");
+	  console.log("App -> ComponentDidMount");
   }
   
   
   textChange(e){
+	  console.log("App -> textChange()");
 	  this.setState({
 		  message: e.target.value
 	  });
   }
 
   render() {
-	  console.log("render");
+	  console.log("App -> render");
 	  console.log(this.state);
+	  //<CheckBox label="AB" handleCheckboxChange={this.toggleCheckbox} key="AB" />
+	  //<Button label="Click Me"/>
     return (
 	    <div>
-			<CheckBox label="AB" handleCheckboxChange={this.toggleCheckbox} key="AB" />
-			<Button label="Click Me"/>
+			<ItemList />
 		</div>
     );
   }

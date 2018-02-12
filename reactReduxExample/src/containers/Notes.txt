@@ -1,1 +1,0 @@
-“Smart” React components that are connected to our Redux store
