@@ -1,0 +1,1 @@
+“Dumb” React components that have no knowledge of Redux

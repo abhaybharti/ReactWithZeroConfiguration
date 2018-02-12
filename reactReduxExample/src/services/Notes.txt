@@ -1,0 +1,1 @@
+Abstraction facades for external API (like backend servers)
