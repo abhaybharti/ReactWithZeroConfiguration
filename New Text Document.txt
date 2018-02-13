@@ -3,3 +3,4 @@ https://appdividend.com/2017/08/23/redux-tutorial-example-scratch/
 https://www.codementor.io/mz026/getting-started-with-react-redux-an-intro-8r6kurcxf
 https://www.ag-grid.com/example-react-redux/
 https://www.codementor.io/mz026/server-side-rendering-with-redux-and-react-router-8s8en3o7p
+https://medium.com/@rajaraodv/the-anatomy-of-a-react-redux-app-759282368c5a
