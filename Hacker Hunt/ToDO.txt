@@ -1,0 +1,11 @@
+It has been said that all web apps are basically just lists. This app will give you some practice with lists of components that are a little more complicated than todos.
+
+Use static data at first, and if you want a little more of a challenge, fetch stories from their API. From what I can glean from devtools, this is just a single route, https://hackerhunt.co/api/daily/0, and you can replace the 0 with a different page number.
+
+You could go a step further and replicate their routing structure with React Router.
+
+Make a clone of Hacker Hunt.
+Use static data until you get the app rendering correctly
+
+Use their API to fetch real data: https://hackerhunt.co/api/daily/0
+• Implement pagination

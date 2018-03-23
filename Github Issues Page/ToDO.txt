@@ -1,0 +1,13 @@
+Start by fetching open issues from Github’s API and displaying them in a list. You could use static data for this too.
+
+Then add a pagination control to allow navigating through the entire list of issues. You might find it useful to add React Router too, so that you can navigate directly to a given page.
+
+For added difficulty, implement the issue detail page too. Render the issue’s Markdown text and its comments using something like react-markdown.
+
+Start with just the list by itself. Ignore the star rating, search/
+filter controls, etc.
+• Fetch data from Github’s API
+• Add pagination controls
+• Use React Router to allow navigating directly to a page
+• Click an issue to go to its detail page
+• Render the issue’s text + comments with react-markdown

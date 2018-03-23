@@ -1,0 +1,5 @@
+• Render a nested list of comments (start with static data)
+• Add the ability to add comments at the top level
+• Add the ability to Reply to a comment
+• Make the upvote/downvote buttons functional
+• How do you handle deep nesting (e.g. > 3 or 4 levels?)

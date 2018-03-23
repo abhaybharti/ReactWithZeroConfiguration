@@ -1,0 +1,8 @@
+• Clone a single page from Instagram - use static data at first
+• Download the images and serve them locally, use a
+screenshot of the map instead of a real map, etc.
+
+Bonus
+• Use the API to fetch real data
+https://www.instagram.com/developer/
+• Implement the “Load More” button, and infinite scrolling
