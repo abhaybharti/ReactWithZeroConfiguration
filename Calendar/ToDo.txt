@@ -1,0 +1,7 @@
+Start by making a Calendar component that displays a given
+month/year
+• Add interactivity: selecting dates, and date ranges
+• Add controls to move forward/backward between months —
+do these become part of the Calendar component, or are they
+in a parent? Where should the state be maintained for
+maximum reusability?

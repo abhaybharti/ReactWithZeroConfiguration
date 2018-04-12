@@ -1,0 +1,13 @@
+{
+  "development": {
+    "use_env_variable": "postgres://tqeixble:d8RGyjD72vaAY4bOKXnbl65fmylhalLJ@baasu.db.elephantsql.com:5432/tqeixble"
+  },
+  "test": {
+    "username": "abhaybharti",
+    "password": Baba1981,
+    "database": "tqeixble",
+    "host": "127.0.0.1",
+    "port": 5432,
+    "dialect": "postgres"
+  }
+}

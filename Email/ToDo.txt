@@ -1,0 +1,8 @@
+Make a clone of your favorite email client.
+Start by rendering the list of emails, and use static
+data.
+Once that’s working, enable clicking on emails to view
+their contents. For crazy extra bonus points, fetch the
+actual mail over IMAP. Here’s a
+
+https://github.com/emailjs/emailjs-imap-client

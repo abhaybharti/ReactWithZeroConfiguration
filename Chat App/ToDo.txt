@@ -1,0 +1,7 @@
+• Make a clone of something like Apple’s Messages app
+• Assume 2 participants
+• After it’s working with static data, add the ability to send messages
+• Create a back end server to handle the messages
+• Connect the React app to the back end and send real
+messages back and forth
+• Add the ability for more than 2 participants in a single chat

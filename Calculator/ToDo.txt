@@ -1,0 +1,12 @@
+You probably already know how these work. Add, subtract, multiply, divide… Clicking the numbers or the operations should perform the action.
+
+For added challenge, respond to keyboard input too. You shouldn’t need to add an <input> element to make this work. If you do use an <input>, make it so that the user doesn’t need to focus the input control to type into it.
+
+Spend a little time thinking about how the state will be represented. Do you need to store more than just the numbers on the display? When you type a new number, does it replace the display with that number, or append it to the end?
+
+Add some snapshot tests with Jest to test that the calculator works correctly.
+
+1. Clicking the numbers or the operations should perform the corresponding action.
+2. Think about what to store in state. Just the numbers on the display? When you type a new number, does it
+replace the display, or append?
+3. Respond to keyboard input without using an <input> control.
